@@ -1,1 +1,64 @@
+Ejercicio 1)a)
+
+#include <stdio.h>
+
+int main()
+{
+    int matriz[3][2];
+    int i, j;
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 2; j++) {
+            printf("\nIngrese el valor de la posicion [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    printf("\nMatriz:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 2; j++) {
+            printf("%d\t", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+1)b)
+#include <stdio.h>
+
+#define FILAS 3
+#define COLUMNAS 2
+#define CAPAS 2
+
+int main()
+{
+    int matriz[FILAS][COLUMNAS][CAPAS];
+    int i, j, k;
+
+    for (i = 0; i < FILAS; i++) {
+        for (j = 0; j < COLUMNAS; j++) {
+            for (k = 0; k < CAPAS; k++) {
+                printf("\nIngrese el valor de la posicion [%d][%d][%d]: ", i, j, k);
+                scanf("%d", &matriz[i][j][k]);
+            }
+        }
+    }
+
+    printf("\nMatriz:\n");
+    for (k = 0; k < CAPAS; k++) {
+        printf("\nCapa %d:\n", k);
+        for (i = 0; i < FILAS; i++) {
+            for (j = 0; j < COLUMNAS; j++) {
+                printf("%d\t", matriz[i][j][k]);
+            }
+            printf("\n");
+        }
+    }
+
+    return 0;
+}
+
+Ejercicio 2)
 
