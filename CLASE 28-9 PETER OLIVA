@@ -61,4 +61,43 @@ int main()
 }
 
 Ejercicio 2)
+#include <stdio.h>
 
+int main()
+{
+    int tabla[4][4];
+    int i,j;
+
+    // A y B
+    tabla[0][0]=0; tabla[0][1]=0;
+    tabla[1][0]=0; tabla[1][1]=1;
+    tabla[2][0]=1; tabla[2][1]=0;
+    tabla[3][0]=1; tabla[3][1]=1;
+
+    // AND y OR
+    for(i=0;i<4;i++){
+        if(tabla[i][0]==1 && tabla[i][1]==1){
+            tabla[i][2]=1;
+        }else{
+            tabla[i][2]=0;
+        }
+
+        if(tabla[i][0]==1 || tabla[i][1]==1){
+            tabla[i][3]=1;
+        }else{
+            tabla[i][3]=0;
+        }
+    }
+
+    printf("A\tB\tAND\tOR\n");
+    printf("--------------------------\n");
+
+    for(i=0;i<4;i++){
+        for(j=0;j<4;j++){
+            printf("%d\t",tabla[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
