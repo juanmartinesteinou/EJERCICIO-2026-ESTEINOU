@@ -68,13 +68,11 @@ int main()
     int tabla[4][4];
     int i,j;
 
-    // A y B
     tabla[0][0]=0; tabla[0][1]=0;
     tabla[1][0]=0; tabla[1][1]=1;
     tabla[2][0]=1; tabla[2][1]=0;
     tabla[3][0]=1; tabla[3][1]=1;
 
-    // AND y OR
     for(i=0;i<4;i++){
         if(tabla[i][0]==1 && tabla[i][1]==1){
             tabla[i][2]=1;
